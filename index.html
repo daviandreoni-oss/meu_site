@@ -1,208 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Site Pessoal</title>
-</head>
-<style>
-    body{
-        margin: 10;
-        padding: 10;
-        background-color: white;
-        color: black;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
+
+    <!-- Importa a fonte Roboto do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 10px;
+            padding: 10px;
+            background-color: white;
+            color: black;
+
+            /* Fonte alterada para Roboto */
+            font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            transition: background-color 0.5s ease;
+        }
+
         header {
             background-color: rgb(5, 61, 110);
             color: white;
             text-align: center;
             padding-top: 10px;
             padding-bottom: 20px;
-        
-    }
+        }
 
-    header h1{
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
 
-        font-size: 35px;
-        margin-bottom: 30px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-    }
+        header p {
+            font-size: 15px;
+        }
 
-    header p{
+        main {
+            padding-top: 20px;
+            width: 400px;
+            margin: 0 auto;
+        }
 
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 15px;
-    
-    }
+        section {
+            background-color: rgb(225, 237, 248);
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid;
+            margin-top: 20px;
+        }
 
-    main{
+        section img {
+            display: block;
+            margin: 10px auto;
+            max-width: 100px;
+            border-radius: 8px;
+        }
 
-        padding-top: 20px;
-        width: 400px;
-        margin: 0 auto;
+        footer {
+            color: red;
+        }
 
-    }
-        section{
-        background-color: rgb(225, 237, 248);
-        padding: 10px;
-        border-radius: 10px;
-        border: 3px solid;
-        margin-top: 20px;
-    }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
 
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
 
+        .buttons {
+            text-align: right;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
 
-    
+        .buttons-vizualizacao {
+            font-size: 20px;
+            color: black;
+            margin-left: 10px;
+        }
 
-    footer{
-
-        color: red;
-
-    }
-
-    a{
-        color: blue;
-        text-decoration: none ;
-    }
-
-    a:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-
-    .buttons{
-        text-align: right;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    .buttons-vizualizacao{
-        font-size: 20px;
-        color: black;
-        
-    }
-
-    .modo-grade{
-        padding-top: 20px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        width: 100%;
-    }
-
-    
-
-
-</style>
+        .modo-grade {
+            padding-top: 20px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+</head>
 <body>
     <header>
-        <h1>
-            Bem vindo à minha pagina!
-        </h1>
-        <p>
-            Aluno do curso DEV!
-        </p>
+        <h1>Bem vindo à minha pagina!</h1>
+        <p>Aluno do curso DEV!</p>
     </header>
 
-
     <div class="buttons">
-        <button class="buttons-vizualizacao" onclick="mudargrade()">Vizualizacao em grade</button>
-        <button class="buttons-vizualizacao" onclick="mudarlista()">Vizualizacao em lista</button>
+        <button class="buttons-vizualizacao" onclick="mudargrade()">Visualização em grade</button>
+        <button class="buttons-vizualizacao" onclick="mudarlista()">Visualização em lista</button>
+        <button class="buttons-vizualizacao" onclick="mudarPlanoDeFundo()">Mudar Plano de Fundo</button>
     </div>
-
-
 
     <main id="principal">
         <section>
-            <h2>
-                Minhas Habilidades:
-            </h2>
+            <h2>Minhas Habilidades:</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Habilidades" />
             <ul>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=A1BaZr82XJI" target="_blank">Programador;</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=5Hn58p-hYC0&t=60s" target="_blank">Programação em html;</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=jtACaiMmCTk" target="_blank">Jogar Tênis de mesa.</a>
-                </li>
+                <li><a href="https://www.youtube.com/watch?v=A1BaZr82XJI" target="_blank">Programador</a></li>
+                <li><a href="https://www.youtube.com/watch?v=5Hn58p-hYC0&t=60s" target="_blank">Programação em HTML</a></li>
+                <li><a href="https://www.youtube.com/watch?v=jtACaiMmCTk" target="_blank">Jogar Tênis de mesa</a></li>
             </ul>
         </section>
         <section>
-            <h2>
-                Cursos
-            </h2>
+            <h2>Cursos</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/3143/3143460.png" alt="Cursos" />
             <ul>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=JaTf3dhx464" target="_blank">Lógica de Programação</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=9MgnhictWRg&t=280s" target="_blank">Redes com IOT</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=yjfB-asZVF4" target="_blank">Sistemas Operacionais</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=CyGIO_YRpuc&list=PLF9vK2NfbRJtqen7xlD7aWtu3Bwik-k6G" target="_blank">Levantamentos de Requisitos</a>
-                </li>
-            </ul>
-
-
-
-        </section>
-        <section>
-            <h2>
-                Meus Hobbies:
-            </h2>
-            <ul>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=k6VMK33G6qo" target="_blank">Jogar Clash Royale</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=uAzyhJDZiVQ" target="_blank">Jogar Bola</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=tK_O9Mh0OlY" target="_blank">PS4</a>
-                </li>
+                <li><a href="https://www.youtube.com/watch?v=JaTf3dhx464" target="_blank">Lógica de Programação</a></li>
+                <li><a href="https://www.youtube.com/watch?v=9MgnhictWRg&t=280s" target="_blank">Redes com IOT</a></li>
+                <li><a href="https://www.youtube.com/watch?v=yjfB-asZVF4" target="_blank">Sistemas Operacionais</a></li>
+                <li><a href="https://www.youtube.com/watch?v=CyGIO_YRpuc&list=PLF9vK2NfbRJtqen7xlD7aWtu3Bwik-k6G" target="_blank">Levantamentos de Requisitos</a></li>
             </ul>
         </section>
         <section>
-            <h2>
-                Contatos:
-            </h2>
+            <h2>Meus Hobbies:</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Hobbies" />
             <ul>
-                <li>
-                    <a href="https://workspace.google.com/intl/pt-BR/gmail/" target="_blank">E-mail: daviandreoni14@gmail.com</a>
-                </li>
-                <li>
-                    <a href="https://web.whatsapp.com/" target="_blank">whatsapp: 19 9999-9999</a>
-
+                <li><a href="https://www.youtube.com/watch?v=k6VMK33G6qo" target="_blank">Jogar Clash Royale</a></li>
+                <li><a href="https://www.youtube.com/watch?v=uAzyhJDZiVQ" target="_blank">Jogar Bola</a></li>
+                <li><a href="https://www.youtube.com/watch?v=tK_O9Mh0OlY" target="_blank">PS4</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contatos:</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Contatos" />
+            <ul>
+                <li><a href="https://workspace.google.com/intl/pt-BR/gmail/" target="_blank">E-mail: daviandreoni14@gmail.com</a></li>
+                <li><a href="https://web.whatsapp.com/" target="_blank">WhatsApp: 19 9999-9999</a></li>
             </ul>
         </section>
     </main>
+
     <section>
         <footer>
             &copy; 2025 davizinho. Qualquer dúvida, entre em contato com nós!!
         </footer>
     </section>
+
+    <script>
+        function mudargrade() {
+            const principal = document.getElementById('principal');
+            principal.classList.add('modo-grade');
+        }
+
+        function mudarlista() {
+            const principal = document.getElementById('principal');
+            principal.classList.remove('modo-grade');
+        }
+
+        function mudarPlanoDeFundo() {
+            const cores = ['white', '#f0f8ff', '#ffe4e1', '#e6ffe6', '#ffffcc', '#333', '#004466'];
+            const corAtual = document.body.style.backgroundColor;
+            let novaCor;
+
+            do {
+                novaCor = cores[Math.floor(Math.random() * cores.length)];
+            } while (novaCor === corAtual);
+
+            document.body.style.backgroundColor = novaCor;
+        }
+    </script>
 </body>
-<script>
-    function mudargrade(){
-        const principal = document.getElementById('principal');
-        principal.classList.add('modo-grade');    
-    }
-       
-</script>
-<script>
-    function mudarlista(){
-        alert("sou o lugar pra muda pra lista");
-        const principal = document.getElementById('principal');
-        principal.classList.remove('modo-grade');
-    }
-</script>
 </html>
