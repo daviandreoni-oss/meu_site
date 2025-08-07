@@ -10,16 +10,16 @@
         margin: 10;
         padding: 10;
         background-color: white;
-        color: black
+        color: black;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    }
         header {
             background-color: rgb(5, 61, 110);
             color: white;
             text-align: center;
             padding-top: 10px;
             padding-bottom: 20px;
-        }
+        
     }
 
     header h1{
@@ -42,7 +42,7 @@
         width: 400px;
         margin: 0 auto;
 
-
+    }
         section{
         background-color: rgb(225, 237, 248);
         padding: 10px;
@@ -71,8 +71,32 @@
         cursor: pointer;
     }
 
+    .buttons{
+        text-align: right;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .buttons-vizualizacao{
+        font-size: 20px;
+        color: black;
+        
+    }
+
+    .modo-grade{
+        padding-top: 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+    }
 
     
+
+
 </style>
 <body>
     <header>
@@ -84,7 +108,15 @@
         </p>
     </header>
 
-    <main>
+
+    <div class="buttons">
+        <button class="buttons-vizualizacao" onclick="mudargrade()">Vizualizacao em grade</button>
+        <button class="buttons-vizualizacao" onclick="mudarlista()">Vizualizacao em lista</button>
+    </div>
+
+
+
+    <main id="principal">
         <section>
             <h2>
                 Minhas Habilidades:
@@ -141,4 +173,18 @@
         </footer>
     </section>
 </body>
+<script>
+    function mudargrade(){
+        const principal = document.getElementById('principal');
+        principal.classList.add('modo-grade');    
+    }
+       
+</script>
+<script>
+    function mudarlista(){
+        alert("sou o lugar pra muda pra lista");
+        const principal = document.getElementById('principal');
+        principal.classList.remove('modo-grade');
+    }
+</script>
 </html>
